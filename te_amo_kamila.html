@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Te amo Kamila 💗</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #f3c6d5;
+
+      font-family: Arial, sans-serif;
+
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 650px;
+      height: 650px;
+
+      top: -250px;
+      left: -180px;
+
+      background: rgba(255, 255, 255, 0.18);
+
+      border-radius: 50%;
+
+      filter: blur(70px);
+
+      animation: luzFondo 8s ease-in-out infinite alternate;
+
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 550px;
+      height: 550px;
+
+      bottom: -250px;
+      right: -150px;
+
+      background: rgba(255, 180, 210, 0.18);
+
+      border-radius: 50%;
+
+      filter: blur(70px);
+
+      animation: luzFondo2 10s ease-in-out infinite alternate;
+
+      pointer-events: none;
+    }
+
+    @keyframes luzFondo {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(100px, 80px) scale(1.15);
+      }
+    }
+
+    @keyframes luzFondo2 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      100% {
+        transform: translate(-80px, -60px) scale(1.12);
+      }
+    }
+
+    .corazon {
+      position: absolute;
+
+      color: rgba(255, 255, 255, 0.45);
+
+      font-size: 25px;
+
+      animation: flotar 5s ease-in-out infinite;
+
+      user-select: none;
+
+      z-index: 1;
+    }
+
+    .c1 {
+      top: 15%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .c2 {
+      top: 70%;
+      left: 10%;
+      font-size: 18px;
+      animation-delay: 1s;
+    }
+
+    .c3 {
+      top: 20%;
+      right: 15%;
+      font-size: 20px;
+      animation-delay: 2s;
+    }
+
+    .c4 {
+      top: 75%;
+      right: 12%;
+      font-size: 28px;
+      animation-delay: 0.5s;
+    }
+
+    .c5 {
+      top: 45%;
+      left: 5%;
+      font-size: 15px;
+      animation-delay: 1.5s;
+    }
+
+    .c6 {
+      top: 42%;
+      right: 5%;
+      font-size: 17px;
+      animation-delay: 2.5s;
+    }
+
+    .tarjeta {
+      position: relative;
+      z-index: 2;
+
+      padding: 60px 80px;
+
+      text-align: center;
+
+      background: rgba(255, 255, 255, 0.20);
+
+      border: 1px solid rgba(255, 255, 255, 0.35);
+
+      border-radius: 30px;
+
+      box-shadow:
+        0 20px 50px rgba(120, 60, 85, 0.15);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      color: #9d3f61;
+
+      font-family:
+        "Pacifico",
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+      font-size: clamp(4rem, 10vw, 8rem);
+
+      font-weight: normal;
+
+      line-height: 1.05;
+
+      text-shadow:
+        2px 4px 10px rgba(90, 35, 55, 0.12);
+
+      animation: latido 2.2s ease-in-out infinite;
+    }
+
+    .subtitulo {
+      margin-top: 20px;
+
+      color: #9d3f61;
+
+      font-size: 15px;
+
+      letter-spacing: 3px;
+
+      opacity: 0.75;
+    }
+
+    .boton-carta {
+      position: relative;
+
+      margin-top: 25px;
+      padding: 12px 25px;
+
+      border: none;
+      border-radius: 20px;
+
+      background: #9d3f61;
+      color: white;
+
+      font-family:
+        "Pacifico",
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+      font-size: 18px;
+
+      cursor: pointer;
+
+      box-shadow: 0 5px 15px rgba(90, 35, 55, 0.20);
+
+      transition: transform 0.2s ease;
+
+      overflow: hidden;
+    }
+
+    .boton-carta:hover {
+      transform: scale(1.05);
+    }
+
+    .boton-carta::after {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: -100%;
+
+      width: 60%;
+      height: 100%;
+
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+      );
+
+      transform: skewX(-20deg);
+
+      animation: brilloBoton 3.5s ease-in-out infinite;
+    }
+
+    @keyframes brilloBoton {
+      0% {
+        left: -100%;
+      }
+
+      45%,
+      100% {
+        left: 150%;
+      }
+    }
+
+    .contador {
+      margin: 24px auto 0;
+
+      padding: 13px 15px 15px;
+
+      width: fit-content;
+
+      min-width: 330px;
+
+      border-radius: 22px;
+
+      background: rgba(255, 255, 255, 0.28);
+
+      border: 1px solid rgba(255, 255, 255, 0.45);
+
+      box-shadow:
+        0 8px 25px rgba(120, 60, 85, 0.10),
+        inset 0 0 15px rgba(255, 255, 255, 0.12);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .contador-titulo {
+      color: #9d3f61;
+
+      font-family:
+        "Pacifico",
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+      font-size: 15px;
+
+      margin-bottom: 10px;
+
+      opacity: 0.9;
+    }
+
+    .contador-titulo::before {
+      content: "♥";
+      margin-right: 7px;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 12px;
+    }
+
+    .contador-titulo::after {
+      content: "♥";
+      margin-left: 7px;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 12px;
+    }
+
+    .tiempo-cajas {
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      gap: 6px;
+    }
+
+    .unidad {
+      min-width: 48px;
+
+      padding: 6px 5px 5px;
+
+      border-radius: 12px;
+
+      background: rgba(255, 255, 255, 0.38);
+
+      box-shadow:
+        inset 0 0 8px rgba(255, 255, 255, 0.18);
+
+      transition: transform 0.2s ease;
+    }
+
+    .unidad:hover {
+      transform: translateY(-2px);
+    }
+
+    .numero {
+      display: block;
+
+      color: #9d3f61;
+
+      font-family:
+        "Pacifico",
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+      font-size: 18px;
+
+      line-height: 1;
+    }
+
+    .etiqueta {
+      display: block;
+
+      margin-top: 4px;
+
+      color: #9d3f61;
+
+      font-size: 8px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      opacity: 0.65;
+    }
+
+    .separador {
+      color: #c06a88;
+
+      font-size: 17px;
+
+      margin-top: -8px;
+
+      opacity: 0.65;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+
+      background: rgba(70, 30, 50, 0.35);
+
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      z-index: 10;
+    }
+
+    .overlay.mostrar {
+      display: flex;
+    }
+
+    .overlay.cerrando {
+      display: flex;
+
+      animation: desaparecerFondo 0.55s ease forwards;
+    }
+
+    .carta {
+      position: relative;
+
+      width: 85%;
+      max-width: 700px;
+      max-height: 80vh;
+
+      padding: 50px 55px;
+
+      background: #fffdf5;
+
+      border: none;
+
+      border-radius: 18px;
+
+      box-shadow:
+        inset 0 0 0 2px #f3b6c9,
+        0 8px 15px rgba(70, 30, 50, 0.15),
+        0 25px 60px rgba(70, 30, 50, 0.30);
+
+      overflow-y: auto;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      transform: rotate(-0.4deg);
+
+      font-family: "Times New Roman", Times, serif;
+
+      animation: abrirCarta 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .carta::-webkit-scrollbar {
+      display: none;
+    }
+
+    .decoracion {
+      position: absolute;
+
+      color: #f3b6c9;
+
+      font-size: 38px;
+
+      opacity: 0.45;
+
+      pointer-events: none;
+
+      z-index: 1;
+    }
+
+    .decoracion.arriba-izq {
+      top: 18px;
+      left: 20px;
+
+      transform: rotate(-20deg);
+    }
+
+    .decoracion.arriba-der {
+      top: 18px;
+      right: 20px;
+
+      transform: rotate(20deg);
+    }
+
+    .decoracion.abajo-izq {
+      bottom: 18px;
+      left: 20px;
+
+      transform: rotate(20deg);
+    }
+
+    .decoracion.abajo-der {
+      bottom: 18px;
+      right: 20px;
+
+      transform: rotate(-20deg);
+    }
+
+    @keyframes abrirCarta {
+      0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.75) rotate(-3deg);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-8px) scale(1.02) rotate(0.5deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(-0.4deg);
+      }
+    }
+
+    .overlay.cerrando .carta {
+      animation: cerrarCartaAnimacion 0.55s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+    }
+
+    @keyframes cerrarCartaAnimacion {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(-0.4deg);
+      }
+
+      45% {
+        opacity: 1;
+        transform: translateY(-10px) scale(0.98) rotate(1deg);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-55px) scale(0.78) rotate(-3deg);
+      }
+    }
+
+    @keyframes desaparecerFondo {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .cerrar {
+      position: absolute;
+
+      top: 15px;
+      right: 20px;
+
+      border: none;
+      background: none;
+
+      font-size: 25px;
+      color: #9d3f61;
+
+      cursor: pointer;
+
+      z-index: 5;
+    }
+
+    .titulo-carta {
+      position: relative;
+      z-index: 2;
+
+      color: #9d3f61;
+
+      font-family: "Times New Roman", Times, serif;
+
+      font-size: 32px;
+
+      text-align: center;
+
+      margin-bottom: 25px;
+    }
+
+    .texto-carta {
+      position: relative;
+      z-index: 2;
+
+      color: #6f3a4d;
+
+      font-family: "Times New Roman", Times, serif;
+
+      font-size: 17px;
+
+      line-height: 1.7;
+
+      white-space: pre-line;
+
+      text-align: left;
+    }
+
+    .firma {
+      position: relative;
+
+      z-index: 2;
+
+      margin-top: 28px;
+
+      text-align: right;
+
+      color: #9d3f61;
+
+      font-family:
+        "Pacifico",
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+      font-size: 25px;
+
+      transform: rotate(-3deg);
+    }
+
+    .control-musica {
+      position: relative;
+
+      z-index: 3;
+
+      display: block;
+
+      margin: 22px auto 0;
+
+      padding: 8px 17px;
+
+      border: 1px solid #f3b6c9;
+
+      border-radius: 20px;
+
+      background: rgba(243, 198, 213, 0.35);
+
+      color: #9d3f61;
+
+      font-family: "Times New Roman", Times, serif;
+
+      font-size: 14px;
+
+      cursor: pointer;
+
+      transition: all 0.2s ease;
+    }
+
+    .control-musica:hover {
+      transform: scale(1.04);
+
+      background: rgba(243, 198, 213, 0.55);
+    }
+
+    .corazon-final {
+      position: relative;
+
+      z-index: 2;
+
+      text-align: center;
+
+      margin-top: 18px;
+
+      font-size: 28px;
+
+      color: #d95c82;
+
+      animation: latidoCorazon 1.6s ease-in-out infinite;
+    }
+
+    @keyframes latidoCorazon {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.25);
+      }
+    }
+
+    .particula {
+      position: fixed;
+
+      z-index: 30;
+
+      pointer-events: none;
+
+      color: #ffffff;
+
+      font-size: 18px;
+
+      animation: explotarCorazon 1.4s ease-out forwards;
+    }
+
+    @keyframes explotarCorazon {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.4);
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+
+        transform:
+          translate(
+            var(--x),
+            var(--y)
+          )
+          rotate(var(--rot))
+          scale(1.15);
+      }
+    }
+
+    @keyframes latido {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      10% {
+        transform: scale(1.03);
+      }
+
+      20% {
+        transform: scale(1);
+      }
+
+      30% {
+        transform: scale(1.025);
+      }
+
+      40% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes flotar {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(6deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .tarjeta {
+        width: 88%;
+        padding: 45px 20px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .subtitulo {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .contador {
+        min-width: 0;
+        width: 100%;
+        padding: 12px 8px 14px;
+      }
+
+      .tiempo-cajas {
+        gap: 3px;
+      }
+
+      .unidad {
+        min-width: 43px;
+      }
+
+      .numero {
+        font-size: 16px;
+      }
+
+      .etiqueta {
+        font-size: 7px;
+      }
+
+      .separador {
+        font-size: 14px;
+      }
+
+      .carta {
+        width: 90%;
+        padding: 40px 30px;
+      }
+
+      .texto-carta {
+        font-size: 15px;
+      }
+
+      .titulo-carta {
+        font-size: 28px;
+      }
+
+      .firma {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio id="musica" preload="auto">
+    <source src="wonderwall.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="corazon c1">♡</div>
+  <div class="corazon c2">♡</div>
+  <div class="corazon c3">♡</div>
+  <div class="corazon c4">♡</div>
+  <div class="corazon c5">♡</div>
+  <div class="corazon c6">♡</div>
+
+  <div class="tarjeta">
+
+    <h1>
+      Te amo<br>
+      Kamila
+    </h1>
+
+    <div class="subtitulo">
+      ♥ con todo mi corazón ♥
+    </div>
+
+    <div class="contador">
+
+      <div class="contador-titulo">
+        llevamos juntos...
+      </div>
+
+      <div class="tiempo-cajas">
+
+        <div class="unidad">
+          <span class="numero" id="meses">0</span>
+          <span class="etiqueta">meses</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="dias">0</span>
+          <span class="etiqueta">días</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="horas">0</span>
+          <span class="etiqueta">horas</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="minutos">0</span>
+          <span class="etiqueta">min</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="segundos">0</span>
+          <span class="etiqueta">seg</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="boton-carta" onclick="abrirCarta()">
+      presiona aqui mi amor 💗
+    </button>
+
+  </div>
+
+  <div class="overlay" id="overlay" onclick="cerrarSiTocaAfuera(event)">
+
+    <div class="carta">
+
+      <div class="decoracion arriba-izq">♡</div>
+      <div class="decoracion arriba-der">♡</div>
+      <div class="decoracion abajo-izq">♡</div>
+      <div class="decoracion abajo-der">♡</div>
+
+      <button class="cerrar" onclick="cerrarCarta()">✕</button>
+
+      <div class="titulo-carta">
+        Para ti, mi amor 💗
+      </div>
+
+      <div class="texto-carta">
+Mi amor, quiero que sepas que te amo con todo mi corazon, con toda mi alma, no hay dia ni hora en la que no piense en ti, te amo y te amo de verdad, gracias por ser una novia tan linda, gracias por siempre apoyarme, ahora me toca apoyarte a ti.
+
+Se te viene el pre y se vienen cosas complicadas, pero no imposibles, recuerda que tu puedes con todo, recuerda que eres muy capaz, recuerda que eres fuerte, inteligente pero sobretodo una mujer valiente.
+
+Asi que si las cosas se ponen dificiles y sientes que ya no puedes mas, estare aqui para apoyarte, para darte lo que necesites, para escucharte y para aconsejarte.
+
+Quiero que seas lo mas feliz posible mi amor y por eso te apoyare al 100 en esta nueva etapa que se te viene.
+
+Dale mi amor, que tu puedes, recuerda que siempre me vas a tener aqui, en ti veo mucho futuro, en lo que sea que TÚ decidas ser, vas a ser la mejor en eso, porque eres muy capaz de todo, siempre estare para ti mi amor, si nadie esta contigo yo simpre voy a estar ahi, no me importa contra cuantos me tenga que ir porque nunca dejare de apoyarte y de alentarte, todo lo hago por ti, por la mujer de mi vida, la que me da felicidad, nunca dudes de eso amor, eres mi felicidad, eres mi vida entera, no me puedo imaginar una vida sin ti, porque a tu lado todo es diferente, todo es mejor, asi que siempre cuenta conmigo, para cualquier cosa que necesites yo estare apoyandote, ayudandote, guiandote.
+
+Soy muy afortunado de estar contigo, lo supe desde que hablabamos por Instagram, conociendo tu forma de ser tan bella la cual me enamoro, lo supe desde que te vi por primera vez y no podia dejar de pensar en lo hermosa que eres, desde ahi supe que no queria nada mas que estar a tu lado, cuidarte y ayudarte siempre.
+
+Gracias mi amor, gracias por llegar a mi vida, no puedo ser mas afortunado que ahora, teniendo a una mujer como tu, mi todo.
+
+Y siempre recuerda mi amor:
+
+ERES MI MAYOR ORGULLO
+
+TE AMO MILLONES MI AMOR, MUAAAA 💗
+      </div>
+
+      <div class="firma">
+        Con todo mi amor,<br>
+        Matias 💗
+      </div>
+
+      <button
+        class="control-musica"
+        id="controlMusica"
+        onclick="alternarMusica(event)"
+      >
+        ♫ pausar música
+      </button>
+
+      <div class="corazon-final">
+        ♥
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const fechaInicio = new Date(2026, 6, 25, 0, 0, 0);
+
+    function actualizarContador() {
+
+      const ahora = new Date();
+
+      let meses =
+        (ahora.getFullYear() - fechaInicio.getFullYear()) * 12 +
+        (ahora.getMonth() - fechaInicio.getMonth());
+
+      let fechaTemporal = new Date(fechaInicio);
+
+      fechaTemporal.setMonth(
+        fechaInicio.getMonth() + meses
+      );
+
+      if (fechaTemporal > ahora) {
+
+        meses--;
+
+        fechaTemporal = new Date(fechaInicio);
+
+        fechaTemporal.setMonth(
+          fechaInicio.getMonth() + meses
+        );
+      }
+
+      const diferencia = ahora - fechaTemporal;
+
+      const dias = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
+      );
+
+      const horas = Math.floor(
+        (diferencia / (1000 * 60 * 60)) % 24
+      );
+
+      const minutos = Math.floor(
+        (diferencia / (1000 * 60)) % 60
+      );
+
+      const segundos = Math.floor(
+        (diferencia / 1000) % 60
+      );
+
+      document.getElementById("meses").textContent = meses;
+
+      document.getElementById("dias").textContent = dias;
+
+      document.getElementById("horas").textContent =
+        String(horas).padStart(2, "0");
+
+      document.getElementById("minutos").textContent =
+        String(minutos).padStart(2, "0");
+
+      document.getElementById("segundos").textContent =
+        String(segundos).padStart(2, "0");
+    }
+
+    actualizarContador();
+
+    setInterval(actualizarContador, 1000);
+
+
+    function abrirCarta() {
+
+      const overlay =
+        document.getElementById("overlay");
+
+      const musica =
+        document.getElementById("musica");
+
+      const control =
+        document.getElementById("controlMusica");
+
+      overlay.classList.remove("cerrando");
+
+      overlay.classList.remove("mostrar");
+
+      void overlay.offsetWidth;
+
+      overlay.classList.add("mostrar");
+
+      musica.pause();
+
+      musica.currentTime = 0;
+
+      musica.play()
+        .then(() => {
+          control.textContent = "♫ pausar música";
+        })
+        .catch((error) => {
+          console.log("No se pudo reproducir el audio:", error);
+          control.textContent = "♫ reproducir música";
+        });
+
+      crearParticulas();
+    }
+
+
+    function alternarMusica(event) {
+
+      event.stopPropagation();
+
+      const musica =
+        document.getElementById("musica");
+
+      const control =
+        document.getElementById("controlMusica");
+
+      if (musica.paused) {
+
+        musica.play();
+
+        control.textContent =
+          "♫ pausar música";
+
+      } else {
+
+        musica.pause();
+
+        control.textContent =
+          "♫ reproducir música";
+      }
+    }
+
+
+    function cerrarCarta() {
+
+      const overlay =
+        document.getElementById("overlay");
+
+      const musica =
+        document.getElementById("musica");
+
+      if (!overlay.classList.contains("mostrar")) {
+        return;
+      }
+
+      musica.pause();
+
+      musica.currentTime = 0;
+
+      document.getElementById("controlMusica").textContent =
+        "♫ reproducir música";
+
+      overlay.classList.remove("mostrar");
+
+      overlay.classList.add("cerrando");
+
+      setTimeout(() => {
+
+        overlay.classList.remove("cerrando");
+
+      }, 550);
+    }
+
+
+    function cerrarSiTocaAfuera(event) {
+
+      if (
+        event.target ===
+        document.getElementById("overlay")
+      ) {
+
+        cerrarCarta();
+      }
+    }
+
+
+    function crearParticulas() {
+
+      const cantidad = 22;
+
+      for (let i = 0; i < cantidad; i++) {
+
+        const particula =
+          document.createElement("div");
+
+        particula.classList.add("particula");
+
+        particula.textContent =
+          Math.random() > 0.45
+            ? "♡"
+            : "✦";
+
+        const x =
+          (Math.random() - 0.5) * 650;
+
+        const y =
+          (Math.random() - 0.5) * 500;
+
+        const rotacion =
+          (Math.random() - 0.5) * 120;
+
+        particula.style.left = "50%";
+
+        particula.style.top = "50%";
+
+        particula.style.setProperty(
+          "--x",
+          `${x}px`
+        );
+
+        particula.style.setProperty(
+          "--y",
+          `${y}px`
+        );
+
+        particula.style.setProperty(
+          "--rot",
+          `${rotacion}deg`
+        );
+
+        particula.style.animationDelay =
+          `${Math.random() * 0.25}s`;
+
+        document.body.appendChild(particula);
+
+        setTimeout(() => {
+
+          particula.remove();
+
+        }, 1800);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
