@@ -1,0 +1,3243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Te amo Kamila 💗</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Pacifico&display=swap" rel="stylesheet"> 
+ 
+  <style> 
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    } 
+ 
+    body { 
+      height: 100vh; 
+      overflow: hidden; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      background: #f3c6d5; 
+      font-family: Arial, sans-serif; 
+      position: relative; 
+    } 
+ 
+    body::before { 
+      content: ""; 
+      position: fixed; 
+      width: 650px; 
+      height: 650px; 
+      top: -250px; 
+      left: -180px; 
+      background: rgba(255, 255, 255, 0.18); 
+      border-radius: 50%; 
+      filter: blur(70px); 
+      animation: luzFondo 8s ease-in-out infinite alternate; 
+      pointer-events: none; 
+    } 
+ 
+    body::after { 
+      content: ""; 
+      position: fixed; 
+      width: 550px; 
+      height: 550px; 
+      bottom: -250px; 
+      right: -150px; 
+      background: rgba(255, 180, 210, 0.18); 
+      border-radius: 50%; 
+      filter: blur(70px); 
+      animation: luzFondo2 10s ease-in-out infinite alternate; 
+      pointer-events: none; 
+    } 
+ 
+    @keyframes luzFondo { 
+      0% { transform: translate(0, 0) scale(1); } 
+      100% { transform: translate(100px, 80px) scale(1.15); } 
+    } 
+ 
+    @keyframes luzFondo2 { 
+      0% { transform: translate(0, 0) scale(1); } 
+      100% { transform: translate(-80px, -60px) scale(1.12); } 
+    } 
+ 
+    .corazon { 
+      position: absolute; 
+      color: rgba(255, 255, 255, 0.45); 
+      font-size: 25px; 
+      animation: flotar 5s ease-in-out infinite; 
+      user-select: none; 
+      z-index: 1; 
+    } 
+ 
+    .c1 { top: 15%; left: 15%; animation-delay: 0s; } 
+    .c2 { top: 70%; left: 10%; font-size: 18px; animation-delay: 1s; } 
+    .c3 { top: 20%; right: 15%; font-size: 20px; animation-delay: 2s; } 
+    .c4 { top: 75%; right: 12%; font-size: 28px; animation-delay: 0.5s; } 
+    .c5 { top: 45%; left: 5%; font-size: 15px; animation-delay: 1.5s; } 
+    .c6 { top: 42%; right: 5%; font-size: 17px; animation-delay: 2.5s; } 
+ 
+    .tarjeta { 
+      position: relative; 
+      z-index: 2; 
+      padding: 60px 80px; 
+      text-align: center; 
+      background: rgba(255, 255, 255, 0.20); 
+      border: 1px solid rgba(255, 255, 255, 0.35); 
+      border-radius: 30px; 
+      box-shadow: 0 20px 50px rgba(120, 60, 85, 0.15); 
+      backdrop-filter: blur(8px); 
+      -webkit-backdrop-filter: blur(8px); 
+    } 
+ 
+    h1 { 
+      color: #9d3f61; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: clamp(4rem, 10vw, 8rem); 
+      font-weight: normal; 
+      line-height: 1.05; 
+      text-shadow: 2px 4px 10px rgba(90, 35, 55, 0.12); 
+      animation: latido 2.2s ease-in-out infinite; 
+    } 
+ 
+    .subtitulo { 
+      margin-top: 20px; 
+      color: #9d3f61; 
+      font-size: 15px; 
+      letter-spacing: 3px; 
+      opacity: 0.75; 
+    } 
+ 
+    .boton-carta { 
+      position: relative; 
+      margin-top: 25px; 
+      padding: 12px 25px; 
+      border: none; 
+      border-radius: 20px; 
+      background: #9d3f61; 
+      color: white; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 18px; 
+      cursor: pointer; 
+      box-shadow: 0 5px 15px rgba(90, 35, 55, 0.20); 
+      transition: transform 0.2s ease; 
+      overflow: hidden; 
+    } 
+ 
+    .boton-carta:hover { 
+      transform: scale(1.05); 
+    } 
+ 
+    .boton-carta::after { 
+      content: ""; 
+      position: absolute; 
+      top: 0; 
+      left: -100%; 
+      width: 60%; 
+      height: 100%; 
+      background: linear-gradient( 
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.35), 
+        transparent 
+      ); 
+      transform: skewX(-20deg); 
+      animation: brilloBoton 3.5s ease-in-out infinite; 
+    } 
+ 
+    @keyframes brilloBoton { 
+      0% { left: -100%; } 
+      45%, 100% { left: 150%; } 
+    } 
+ 
+    .contador { 
+      margin: 24px auto 0; 
+      padding: 13px 15px 15px; 
+      width: fit-content; 
+      min-width: 330px; 
+      border-radius: 22px; 
+      background: rgba(255, 255, 255, 0.28); 
+      border: 1px solid rgba(255, 255, 255, 0.45); 
+      box-shadow: 
+        0 8px 25px rgba(120, 60, 85, 0.10), 
+        inset 0 0 15px rgba(255, 255, 255, 0.12); 
+      backdrop-filter: blur(8px); 
+      -webkit-backdrop-filter: blur(8px); 
+    } 
+ 
+    .contador-titulo { 
+      color: #9d3f61; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 15px; 
+      margin-bottom: 10px; 
+      opacity: 0.9; 
+    } 
+ 
+    .contador-titulo::before { 
+      content: "♥"; 
+      margin-right: 7px; 
+      font-family: Arial, sans-serif; 
+      font-size: 12px; 
+    } 
+ 
+    .contador-titulo::after { 
+      content: "♥"; 
+      margin-left: 7px; 
+      font-family: Arial, sans-serif; 
+      font-size: 12px; 
+    } 
+ 
+    .tiempo-cajas { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 6px; 
+    } 
+ 
+    .unidad { 
+      min-width: 48px; 
+      padding: 6px 5px 5px; 
+      border-radius: 12px; 
+      background: rgba(255, 255, 255, 0.38); 
+      box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.18); 
+      transition: transform 0.2s ease; 
+    } 
+ 
+    .unidad:hover { 
+      transform: translateY(-2px); 
+    } 
+ 
+    .numero { 
+      display: block; 
+      color: #9d3f61; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 18px; 
+      line-height: 1; 
+    } 
+ 
+    .etiqueta { 
+      display: block; 
+      margin-top: 4px; 
+      color: #9d3f61; 
+      font-size: 8px; 
+      letter-spacing: 1px; 
+      text-transform: uppercase; 
+      opacity: 0.65; 
+    } 
+ 
+    .separador { 
+      color: #c06a88; 
+      font-size: 17px; 
+      margin-top: -8px; 
+      opacity: 0.65; 
+    } 
+ 
+    .overlay { 
+      position: fixed; 
+      inset: 0; 
+      background: rgba(70, 30, 50, 0.35); 
+      display: none; 
+      justify-content: center; 
+      align-items: center; 
+      z-index: 10; 
+    } 
+ 
+    .overlay.mostrar { 
+      display: flex; 
+    } 
+ 
+    .overlay.cerrando { 
+      display: flex; 
+      animation: desaparecerFondo 0.55s ease forwards; 
+    } 
+ 
+    .carta { 
+      position: relative; 
+      width: 85%; 
+      max-width: 700px; 
+      max-height: 80vh; 
+      padding: 50px 55px; 
+      background: #fffdf5; 
+      border-radius: 18px; 
+      box-shadow: 
+        inset 0 0 0 2px #f3b6c9, 
+        0 8px 15px rgba(70, 30, 50, 0.15), 
+        0 25px 60px rgba(70, 30, 50, 0.30); 
+      overflow-y: auto; 
+      scrollbar-width: none; 
+      -ms-overflow-style: none; 
+      transform: rotate(-0.4deg); 
+      font-family: "Times New Roman", Times, serif; 
+      animation: abrirCarta 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+    } 
+ 
+    .carta::-webkit-scrollbar { 
+      display: none; 
+    } 
+ 
+    .carta.oculta { 
+      display: none; 
+    } 
+ 
+    .decoracion { 
+      position: absolute; 
+      color: #f3b6c9; 
+      font-size: 38px; 
+      opacity: 0.45; 
+      pointer-events: none; 
+      z-index: 1; 
+    } 
+ 
+    .decoracion.arriba-izq { 
+      top: 18px; 
+      left: 20px; 
+      transform: rotate(-20deg); 
+    } 
+ 
+    .decoracion.arriba-der { 
+      top: 18px; 
+      right: 20px; 
+      transform: rotate(20deg); 
+    } 
+ 
+    .decoracion.abajo-izq { 
+      bottom: 18px; 
+      left: 20px; 
+      transform: rotate(20deg); 
+    } 
+ 
+    .decoracion.abajo-der { 
+      bottom: 18px; 
+      right: 20px; 
+      transform: rotate(-20deg); 
+    } 
+ 
+    @keyframes abrirCarta { 
+      0% { 
+        opacity: 0; 
+        transform: translateY(60px) scale(0.75) rotate(-3deg); 
+      } 
+ 
+      60% { 
+        opacity: 1; 
+        transform: translateY(-8px) scale(1.02) rotate(0.5deg); 
+      } 
+ 
+      100% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1) rotate(-0.4deg); 
+      } 
+    } 
+ 
+    .overlay.cerrando .carta { 
+      animation: cerrarCartaAnimacion 0.55s cubic-bezier(0.55, 0, 1, 0.45) forwards; 
+    } 
+ 
+    @keyframes cerrarCartaAnimacion { 
+      0% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1) rotate(-0.4deg); 
+      } 
+ 
+      45% { 
+        opacity: 1; 
+        transform: translateY(-10px) scale(0.98) rotate(1deg); 
+      } 
+ 
+      100% { 
+        opacity: 0; 
+        transform: translateY(-55px) scale(0.78) rotate(-3deg); 
+      } 
+    } 
+ 
+    @keyframes desaparecerFondo { 
+      0% { opacity: 1; } 
+      100% { opacity: 0; } 
+    } 
+ 
+    .cerrar { 
+      position: absolute; 
+      top: 15px; 
+      right: 20px; 
+      border: none; 
+      background: none; 
+      font-size: 25px; 
+      color: #9d3f61; 
+      cursor: pointer; 
+      z-index: 5; 
+    } 
+ 
+    .titulo-carta { 
+      position: relative; 
+      z-index: 2; 
+      color: #9d3f61; 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 32px; 
+      text-align: center; 
+      margin-bottom: 25px; 
+    } 
+ 
+    .texto-carta { 
+      position: relative; 
+      z-index: 2; 
+      color: #6f3a4d; 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 17px; 
+      line-height: 1.7; 
+      white-space: pre-line; 
+      text-align: left; 
+    } 
+ 
+    .firma { 
+      position: relative; 
+      z-index: 2; 
+      margin-top: 28px; 
+      text-align: right; 
+      color: #9d3f61; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 25px; 
+      transform: rotate(-3deg); 
+    } 
+ 
+    .control-musica { 
+      position: relative; 
+      z-index: 3; 
+      display: block; 
+      margin: 22px auto 0; 
+      padding: 8px 17px; 
+      border: 1px solid #f3b6c9; 
+      border-radius: 20px; 
+      background: rgba(243, 198, 213, 0.35); 
+      color: #9d3f61; 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 14px; 
+      cursor: pointer; 
+      transition: all 0.2s ease; 
+    } 
+ 
+    .control-musica:hover { 
+      transform: scale(1.04); 
+      background: rgba(243, 198, 213, 0.55); 
+    } 
+ 
+    .corazon-final { 
+      position: relative; 
+      z-index: 2; 
+      text-align: center; 
+      margin-top: 18px; 
+      font-size: 28px; 
+      color: #d95c82; 
+      animation: latidoCorazon 1.6s ease-in-out infinite; 
+    } 
+ 
+    .boton-galeria { 
+      display: block; 
+      margin: 15px auto 0; 
+      width: 52px; 
+      height: 52px; 
+      border: 1px solid #f3b6c9; 
+      border-radius: 50%; 
+      background: rgba(243, 198, 213, 0.45); 
+      color: #9d3f61; 
+      font-size: 27px; 
+      cursor: pointer; 
+      transition: transform 0.25s ease, background 0.25s ease; 
+      animation: flechaLatido 2s ease-in-out infinite; 
+    } 
+ 
+    .boton-galeria:hover { 
+      transform: translateX(5px) scale(1.08); 
+      background: rgba(243, 198, 213, 0.75); 
+    } 
+ 
+    .texto-pista { 
+      margin-top: 7px; 
+      text-align: center; 
+      color: #9d3f61; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 12px; 
+      opacity: 0.7; 
+    } 
+ 
+    @keyframes flechaLatido { 
+      0%, 100% { transform: translateX(0); } 
+      50% { transform: translateX(5px); } 
+    } 
+ 
+    /* GALERIA */ 
+ 
+    .galeria { 
+      position: relative; 
+      width: 100%; 
+      height: 100%; 
+      display: none; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 25px 0 20px; 
+      overflow: hidden; 
+      animation: entrarGaleria 0.7s ease; 
+    } 
+ 
+    .galeria.activa { 
+      display: flex; 
+    } 
+ 
+    @keyframes entrarGaleria { 
+      0% { 
+        opacity: 0; 
+        transform: scale(0.94); 
+      } 
+ 
+      100% { 
+        opacity: 1; 
+        transform: scale(1); 
+      } 
+    } 
+ 
+    .cerrar-galeria { 
+      top: 18px; 
+      right: 25px; 
+      color: white; 
+      text-shadow: 0 2px 8px rgba(70, 30, 50, 0.4); 
+    } 
+ 
+    .galeria-titulo { 
+      color: white; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 32px; 
+      text-shadow: 0 3px 12px rgba(70, 30, 50, 0.35); 
+      margin-bottom: 3px; 
+      text-align: center; 
+    } 
+ 
+    .galeria-subtitulo { 
+      color: rgba(255, 255, 255, 0.85); 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 14px; 
+      margin-bottom: 5px; 
+    } 
+ 
+    .carrusel { 
+      width: 100%; 
+      display: flex; 
+      gap: 28px; 
+      overflow-x: auto; 
+      overflow-y: hidden; 
+      padding: 35px 8vw 30px; 
+      scroll-snap-type: x mandatory; 
+      scroll-behavior: smooth; 
+      -webkit-overflow-scrolling: touch; 
+      touch-action: pan-x; 
+      scrollbar-width: none; 
+    } 
+ 
+    .carrusel::-webkit-scrollbar { 
+      display: none; 
+    } 
+ 
+    .foto-card { 
+      flex: 0 0 300px; 
+      scroll-snap-align: center; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      flex-direction: column; 
+      transform: rotate(-1.5deg); 
+    } 
+ 
+    .foto-card:nth-child(2n) { 
+      transform: rotate(1.5deg); 
+    } 
+ 
+    .foto-card:nth-child(3n) { 
+      transform: rotate(-0.7deg); 
+    } 
+ 
+    .polaroid { 
+      width: 300px; 
+      padding: 12px 12px 17px; 
+      background: #fffdf5; 
+      border-radius: 3px; 
+      box-shadow: 
+        0 12px 30px rgba(50, 20, 35, 0.28), 
+        0 3px 8px rgba(50, 20, 35, 0.15); 
+    } 
+ 
+    .polaroid img { 
+      display: block; 
+      width: 100%; 
+      height: 330px; 
+      object-fit: contain; 
+      background: #f5edf0; 
+      border-radius: 1px; 
+    } 
+ 
+    .foto-mensaje { 
+      margin-top: 11px; 
+      padding: 0 5px; 
+      color: #6f3a4d; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 16px; 
+      line-height: 1.25; 
+      text-align: center; 
+    } 
+ 
+    .boton-musica-sparks { 
+      margin-top: 0; 
+      padding: 8px 17px; 
+      border: 1px solid rgba(255, 255, 255, 0.65); 
+      border-radius: 20px; 
+      background: rgba(255, 255, 255, 0.18); 
+      color: white; 
+      font-family: "Times New Roman", Times, serif; 
+      font-size: 14px; 
+      cursor: pointer; 
+      backdrop-filter: blur(5px); 
+      -webkit-backdrop-filter: blur(5px); 
+      transition: all 0.2s ease; 
+    } 
+ 
+    .boton-musica-sparks:hover { 
+      background: rgba(255, 255, 255, 0.3); 
+      transform: scale(1.04); 
+    } 
+ 
+    .flecha-volver { 
+      margin-top: 12px; 
+      border: none; 
+      background: none; 
+      color: white; 
+      font-family: "Pacifico", "Brush Script MT", "Segoe Script", cursive; 
+      font-size: 16px; 
+      cursor: pointer; 
+      opacity: 0.9; 
+      transition: transform 0.2s ease; 
+    } 
+ 
+    .flecha-volver:hover { 
+      transform: translateX(-5px); 
+    } 
+ 
+    /* BOTON CORAZONES */ 
+ 
+    .boton-corazones { 
+      margin-top: 12px; 
+      padding: 10px 23px; 
+      border: 1px solid rgba(255,255,255,0.65); 
+      border-radius: 22px; 
+      background: rgba(255,255,255,0.16); 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 15px; 
+      cursor: pointer; 
+      backdrop-filter: blur(6px); 
+      transition: all 0.25s ease; 
+    } 
+ 
+    .boton-corazones:hover { 
+      transform: scale(1.05); 
+      background: rgba(255,255,255,0.28); 
+    } 
+ 
+    /* CORAZONES */ 
+ 
+    .corazones-pantalla { 
+      position: absolute; 
+      inset: 0; 
+      display: none; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      overflow: hidden; 
+      background: 
+        radial-gradient(circle at center, #f7d2df 0%, #d986a5 50%, #913c60 100%); 
+      animation: aparecerCorazones 0.8s ease; 
+    } 
+ 
+    .corazones-pantalla.activo { 
+      display: flex; 
+    } 
+ 
+    .corazones-titulo { 
+      position: relative; 
+      z-index: 5; 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 34px; 
+      text-shadow: 0 3px 15px rgba(70,30,50,0.25); 
+      text-align: center; 
+    } 
+ 
+    .corazones-subtitulo { 
+      position: relative; 
+      z-index: 5; 
+      margin-top: 4px; 
+      color: rgba(255,255,255,0.9); 
+      font-family: "Times New Roman", serif; 
+      font-size: 15px; 
+      text-align: center; 
+    } 
+ 
+    .corazones-area { 
+      position: relative; 
+      width: min(700px, 94vw); 
+      height: min(440px, 58vh); 
+      margin-top: 8px; 
+    } 
+ 
+    .corazon-interactivo { 
+      position: absolute; 
+      z-index: 4; 
+      border: none; 
+      background: none; 
+      color: white; 
+      font-size: 34px; 
+      cursor: pointer; 
+      text-shadow: 
+        0 0 8px rgba(255,255,255,0.9), 
+        0 0 22px rgba(255,120,180,0.9); 
+      animation: corazonFlotante 3s ease-in-out infinite; 
+      transition: transform 0.25s ease; 
+    } 
+ 
+    .corazon-interactivo:hover { 
+      transform: scale(1.35); 
+    } 
+ 
+    .corazon-interactivo.activo { 
+      transform: scale(1.45); 
+    } 
+ 
+    .mensaje-corazon { 
+      position: absolute; 
+      z-index: 8; 
+      left: 50%; 
+      bottom: 5px; 
+      transform: translateX(-50%) translateY(15px); 
+      width: min(430px, 82vw); 
+      padding: 15px 20px; 
+      border-radius: 20px; 
+      background: rgba(255,255,255,0.16); 
+      border: 1px solid rgba(255,255,255,0.3); 
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px); 
+      color: white; 
+      font-family: "Times New Roman", serif; 
+      font-size: 16px; 
+      line-height: 1.5; 
+      text-align: center; 
+      opacity: 0; 
+      pointer-events: none; 
+      transition: all 0.35s ease; 
+    } 
+ 
+    .mensaje-corazon.mostrar { 
+      opacity: 1; 
+      transform: translateX(-50%) translateY(0); 
+    } 
+ 
+    .boton-secreto { 
+      position: relative; 
+      z-index: 6; 
+      margin-top: 10px; 
+      padding: 10px 23px; 
+      border: 1px solid rgba(255,255,255,0.65); 
+      border-radius: 22px; 
+      background: rgba(255,255,255,0.15); 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 15px; 
+      cursor: pointer; 
+      transition: all 0.25s ease; 
+    } 
+ 
+    .boton-secreto:hover { 
+      transform: scale(1.05); 
+      background: rgba(255,255,255,0.27); 
+    } 
+ 
+    .boton-volver-corazones { 
+      position: relative; 
+      z-index: 6; 
+      margin-top: 9px; 
+      border: none; 
+      background: none; 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 14px; 
+      cursor: pointer; 
+      opacity: 0.9; 
+    } 
+ 
+    @keyframes aparecerCorazones { 
+      from { 
+        opacity: 0; 
+        transform: scale(0.96); 
+      } 
+ 
+      to { 
+        opacity: 1; 
+        transform: scale(1); 
+      } 
+    } 
+ 
+    @keyframes corazonFlotante { 
+      0%, 100% { 
+        transform: translateY(0) rotate(-5deg); 
+      } 
+ 
+      50% { 
+        transform: translateY(-13px) rotate(5deg); 
+      } 
+    } 
+ 
+    /* SECRETO */ 
+ 
+    .secreto-pantalla { 
+      position: absolute; 
+      inset: 0; 
+      display: none; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      overflow-y: auto; 
+      padding: 35px 20px; 
+      background: 
+        radial-gradient(circle at center, #4d2840 0%, #281323 55%, #12080f 100%); 
+      animation: aparecerSecreto 0.9s ease; 
+      text-align: center; 
+    } 
+ 
+    .secreto-pantalla.activo { 
+      display: flex; 
+    } 
+ 
+    .secreto-corazon { 
+      color: #f5a8c5; 
+      font-size: 42px; 
+      animation: latidoCorazon 1.8s ease-in-out infinite; 
+      margin-bottom: 8px; 
+    } 
+ 
+    .secreto-titulo { 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 35px; 
+      text-shadow: 0 0 18px rgba(255,180,210,0.3); 
+      margin-bottom: 18px; 
+    } 
+ 
+    .secreto-carta { 
+      width: min(680px, 90vw); 
+      max-height: 62vh; 
+      overflow-y: auto; 
+      padding: 30px 32px; 
+      border-radius: 24px; 
+      background: rgba(255,255,255,0.08); 
+      border: 1px solid rgba(255,255,255,0.18); 
+      box-shadow: 
+        0 20px 60px rgba(0,0,0,0.25), 
+        inset 0 0 30px rgba(255,255,255,0.03); 
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px); 
+      scrollbar-width: none; 
+    } 
+ 
+    .secreto-carta::-webkit-scrollbar { 
+      display: none; 
+    } 
+ 
+    .secreto-texto { 
+      color: rgba(255,255,255,0.93); 
+      font-family: "Times New Roman", serif; 
+      font-size: 17px; 
+      line-height: 1.75; 
+      text-align: left; 
+    } 
+ 
+    .secreto-boton { 
+      margin-top: 18px; 
+      padding: 9px 21px; 
+      border: 1px solid rgba(255,255,255,0.55); 
+      border-radius: 20px; 
+      background: rgba(255,255,255,0.11); 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 14px; 
+      cursor: pointer; 
+      transition: all 0.25s ease; 
+    } 
+ 
+    .secreto-boton:hover { 
+      transform: scale(1.05); 
+      background: rgba(255,255,255,0.22); 
+    } 
+ 
+    @keyframes aparecerSecreto { 
+      from { 
+        opacity: 0; 
+        transform: scale(0.96); 
+      } 
+ 
+      to { 
+        opacity: 1; 
+        transform: scale(1); 
+      } 
+    } 
+ 
+    /* UNIVERSO */ 
+ 
+    .universo { 
+      position: absolute; 
+      inset: 0; 
+      display: none; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      overflow: hidden; 
+      background: 
+        radial-gradient(circle at center, #352044 0%, #1b1028 48%, #0d0815 100%); 
+      animation: aparecerUniverso 1s ease; 
+    } 
+ 
+    .universo.activo { 
+      display: flex; 
+    } 
+ 
+    .universo::before { 
+      content: ""; 
+      position: absolute; 
+      width: 700px; 
+      height: 700px; 
+      border-radius: 50%; 
+      background: rgba(220, 120, 170, 0.08); 
+      filter: blur(80px); 
+      pointer-events: none; 
+    } 
+ 
+    .universo-titulo { 
+      position: relative; 
+      z-index: 4; 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 34px; 
+      text-shadow: 0 0 20px rgba(255,255,255,0.25); 
+      margin-bottom: 2px; 
+    } 
+ 
+    .universo-subtitulo { 
+      position: relative; 
+      z-index: 4; 
+      color: rgba(255,255,255,0.78); 
+      font-family: "Times New Roman", serif; 
+      font-size: 15px; 
+      margin-bottom: 5px; 
+      text-align: center; 
+    } 
+ 
+    .constelacion { 
+      position: relative; 
+      width: min(650px, 90vw); 
+      height: min(430px, 57vh); 
+      margin-top: 5px; 
+    } 
+ 
+    .lineas-corazon { 
+      position: absolute; 
+      inset: 0; 
+      width: 100%; 
+      height: 100%; 
+      overflow: visible; 
+      z-index: 1; 
+    } 
+ 
+    .lineas-corazon path { 
+      fill: none; 
+      stroke: rgba(255, 190, 220, 0.45); 
+      stroke-width: 1.2; 
+      stroke-dasharray: 5 7; 
+      animation: lineaBrillo 4s ease-in-out infinite; 
+    } 
+ 
+    .estrella { 
+      position: absolute; 
+      z-index: 3; 
+      width: 9px; 
+      height: 9px; 
+      border-radius: 50%; 
+      background: white; 
+      box-shadow: 
+        0 0 5px white, 
+        0 0 12px rgba(255,190,220,0.9), 
+        0 0 25px rgba(255,140,200,0.65); 
+      cursor: pointer; 
+      transform: translate(-50%, -50%); 
+      transition: transform 0.25s ease, box-shadow 0.25s ease; 
+      animation: estrellaBrilla 2.5s ease-in-out infinite; 
+    } 
+ 
+    .estrella::before, 
+    .estrella::after { 
+      content: ""; 
+      position: absolute; 
+      left: 50%; 
+      top: 50%; 
+      background: rgba(255,255,255,0.75); 
+      transform: translate(-50%, -50%); 
+    } 
+ 
+    .estrella::before { 
+      width: 22px; 
+      height: 1px; 
+    } 
+ 
+    .estrella::after { 
+      width: 1px; 
+      height: 22px; 
+    } 
+ 
+    .estrella:hover { 
+      transform: translate(-50%, -50%) scale(1.8); 
+      box-shadow: 
+        0 0 8px white, 
+        0 0 20px white, 
+        0 0 40px rgba(255,140,200,0.9); 
+    } 
+ 
+    .estrella.activa { 
+      transform: translate(-50%, -50%) scale(2); 
+    } 
+ 
+    .estrella:nth-child(2n) { 
+      animation-delay: 0.7s; 
+    } 
+ 
+    .estrella:nth-child(3n) { 
+      animation-delay: 1.4s; 
+    } 
+ 
+    .mensaje-estrella { 
+      position: absolute; 
+      z-index: 10; 
+      left: 50%; 
+      bottom: 8px; 
+      transform: translateX(-50%) translateY(10px); 
+      width: min(390px, 80vw); 
+      padding: 12px 18px; 
+      border-radius: 18px; 
+      background: rgba(255,255,255,0.10); 
+      border: 1px solid rgba(255,255,255,0.20); 
+      backdrop-filter: blur(8px); 
+      color: white; 
+      text-align: center; 
+      font-family: "Times New Roman", serif; 
+      font-size: 15px; 
+      opacity: 0; 
+      pointer-events: none; 
+      transition: all 0.35s ease; 
+    } 
+ 
+    .mensaje-estrella.mostrar { 
+      opacity: 1; 
+      transform: translateX(-50%) translateY(0); 
+    } 
+ 
+    .universo-frase { 
+      position: relative; 
+      z-index: 4; 
+      color: rgba(255,255,255,0.9); 
+      font-family: "Pacifico", cursive; 
+      font-size: 16px; 
+      margin-top: -2px; 
+      text-align: center; 
+      max-width: 90%; 
+    } 
+ 
+    .boton-regalo { 
+      position: relative; 
+      z-index: 5; 
+      margin-top: 14px; 
+      padding: 9px 21px; 
+      border: 1px solid rgba(255,255,255,0.5); 
+      border-radius: 20px; 
+      background: rgba(255,255,255,0.10); 
+      color: white; 
+      font-family: "Pacifico", cursive; 
+      font-size: 14px; 
+      cursor: pointer; 
+      transition: all 0.25s ease; 
+    } 
+ 
+    .boton-regalo:hover { 
+      transform: scale(1.05); 
+      background: rgba(255,255,255,0.20); 
+    } 
+ 
+    @keyframes aparecerUniverso { 
+      from { 
+        opacity: 0; 
+        transform: scale(0.96); 
+      } 
+ 
+      to { 
+        opacity: 1; 
+        transform: scale(1); 
+      } 
+    } 
+ 
+    @keyframes lineaBrillo { 
+      0%, 100% { 
+        opacity: 0.35; 
+      } 
+ 
+      50% { 
+        opacity: 0.8; 
+      } 
+    } 
+ 
+    @keyframes estrellaBrilla { 
+      0%, 100% { 
+        opacity: 0.65; 
+      } 
+ 
+      50% { 
+        opacity: 1; 
+      } 
+    } 
+ 
+    /* REGALO */ 
+ 
+    .regalo-pantalla { 
+      position: absolute; 
+      inset: 0; 
+      display: none; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      overflow: hidden; 
+      background: 
+        radial-gradient(circle at center, #f5b5cc 0%, #d77d9f 45%, #8e3b5e 100%); 
+      animation: aparecerRegalo 0.8s ease; 
+    } 
+ 
+    .regalo-pantalla.activo { 
+      display: flex; 
+    }
+
+    .regalo-titulo {
+      color: white;
+      font-family: "Pacifico", cursive;
+      font-size: 32px;
+      text-shadow: 0 3px 15px rgba(70,30,50,0.25);
+      text-align: center;
+    }
+
+    .regalo-subtitulo {
+      color: rgba(255,255,255,0.9);
+      font-family: "Times New Roman", serif;
+      font-size: 15px;
+      margin-top: 3px;
+      text-align: center;
+    }
+
+    .caja-regalo {
+      position: relative;
+      width: 150px;
+      height: 125px;
+      margin-top: 45px;
+      cursor: pointer;
+      transform: translateY(0);
+      transition: transform 0.25s ease;
+      filter: drop-shadow(0 18px 22px rgba(70,30,50,0.25));
+    }
+
+    .caja-regalo:hover {
+      transform: translateY(-7px) scale(1.04);
+    }
+
+    .caja-base {
+      position: absolute;
+      bottom: 0;
+      left: 8px;
+      width: 134px;
+      height: 83px;
+      background: #fff1f5;
+      border-radius: 5px 5px 10px 10px;
+      box-shadow: inset 0 -7px 0 rgba(180,70,110,0.08);
+    }
+
+    .caja-base::before {
+      content: "";
+      position: absolute;
+      left: 59px;
+      top: 0;
+      width: 17px;
+      height: 100%;
+      background: #d95c82;
+    }
+
+    .tapa-regalo {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 25px;
+      width: 150px;
+      height: 31px;
+      background: #fff8fa;
+      border-radius: 6px;
+      box-shadow: 0 5px 7px rgba(80,30,50,0.12);
+      transform-origin: 8px 28px;
+      transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tapa-regalo::before {
+      content: "";
+      position: absolute;
+      left: 66px;
+      top: 0;
+      width: 18px;
+      height: 31px;
+      background: #d95c82;
+    }
+
+    .cinta-vertical {
+      position: absolute;
+      z-index: 3;
+      left: 61px;
+      top: -2px;
+      width: 28px;
+      height: 27px;
+      pointer-events: none;
+    }
+
+    .lazo-izq,
+    .lazo-der {
+      position: absolute;
+      top: 0;
+      width: 35px;
+      height: 23px;
+      border: 7px solid #d95c82;
+      background: transparent;
+    }
+
+    .lazo-izq {
+      right: 14px;
+      border-radius: 80% 20% 70% 30%;
+      transform: rotate(24deg);
+    }
+
+    .lazo-der {
+      left: 14px;
+      border-radius: 20% 80% 30% 70%;
+      transform: rotate(-24deg);
+    }
+
+    .corazon-regalo {
+      position: absolute;
+      z-index: 4;
+      left: 50%;
+      top: -14px;
+      transform: translateX(-50%) scale(0);
+      color: white;
+      font-size: 30px;
+      transition: transform 0.7s ease 0.25s;
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+    }
+
+    .caja-regalo.abierta .tapa-regalo {
+      transform: translateY(-52px) rotate(-12deg);
+    }
+
+    .caja-regalo.abierta .corazon-regalo {
+      transform: translateX(-50%) scale(1);
+    }
+
+    .texto-regalo {
+      margin-top: 27px;
+      max-width: 440px;
+      padding: 0 20px;
+      color: white;
+      font-family: "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.6;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.7s ease 0.5s;
+    }
+
+    .regalo-pantalla.abierto .texto-regalo {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .boton-final {
+      margin-top: 20px;
+      padding: 10px 23px;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 22px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-family: "Pacifico", cursive;
+      font-size: 15px;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.5s ease 1s;
+    }
+
+    .regalo-pantalla.abierto .boton-final {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes aparecerRegalo {
+      from {
+        opacity: 0;
+        transform: scale(0.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* MENSAJE FINAL */
+
+    .final-pantalla {
+      position: absolute;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 30px;
+      background:
+        radial-gradient(circle at center, #f8cbd9 0%, #df91ae 48%, #a7466c 100%);
+      text-align: center;
+      animation: aparecerFinal 1s ease;
+    }
+
+    .final-pantalla.activo {
+      display: flex;
+    }
+
+    .final-pantalla::before,
+    .final-pantalla::after {
+      content: "♥";
+      position: absolute;
+      color: rgba(255,255,255,0.14);
+      font-size: 220px;
+      pointer-events: none;
+    }
+
+    .final-pantalla::before {
+      left: -50px;
+      top: -60px;
+      transform: rotate(-20deg);
+    }
+
+    .final-pantalla::after {
+      right: -50px;
+      bottom: -80px;
+      transform: rotate(20deg);
+    }
+
+    .final-pequeno {
+      position: relative;
+      z-index: 2;
+      color: rgba(255,255,255,0.85);
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+      animation: aparecerTexto 1s ease 0.3s both;
+    }
+
+    .final-mensaje {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+      color: white;
+      font-family: "Pacifico", "Brush Script MT", cursive;
+      font-size: clamp(25px, 4vw, 43px);
+      line-height: 1.5;
+      text-shadow:
+        0 3px 12px rgba(100,35,60,0.22);
+      animation: aparecerTexto 1.2s ease 0.6s both;
+    }
+
+    .final-amo {
+      position: relative;
+      z-index: 2;
+      margin-top: 28px;
+      color: white;
+      font-family: "Pacifico", cursive;
+      font-size: clamp(42px, 8vw, 78px);
+      text-shadow:
+        0 0 12px rgba(255,255,255,0.55),
+        0 5px 18px rgba(100,35,60,0.25);
+      animation:
+        aparecerTexto 1s ease 1.2s both,
+        latidoFinal 2s ease-in-out 2.2s infinite;
+    }
+
+    .volver-inicio {
+      position: relative;
+      z-index: 2;
+      margin-top: 28px;
+      padding: 9px 20px;
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.13);
+      color: white;
+      font-family: "Times New Roman", serif;
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0.9;
+      animation: aparecerTexto 1s ease 1.7s both;
+      transition: all 0.25s ease;
+    }
+
+    .volver-inicio:hover {
+      transform: scale(1.05);
+      background: rgba(255,255,255,0.24);
+    }
+
+    @keyframes aparecerFinal {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes aparecerTexto {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes latidoFinal {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.06);
+      }
+    }
+
+    .particula {
+      position: fixed;
+      z-index: 30;
+      pointer-events: none;
+      color: #ffffff;
+      font-size: 18px;
+      animation: explotarCorazon 1.4s ease-out forwards;
+    }
+
+    @keyframes explotarCorazon {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.4);
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform:
+          translate(var(--x), var(--y))
+          rotate(var(--rot))
+          scale(1.15);
+      }
+    }
+
+    @keyframes latidoCorazon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      10% { transform: scale(1.03); }
+      20% { transform: scale(1); }
+      30% { transform: scale(1.025); }
+      40% { transform: scale(1); }
+    }
+
+    @keyframes flotar {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-15px) rotate(6deg);
+      }
+    }
+
+    /* CELULAR */
+
+    @media (max-width: 600px) {
+
+      .tarjeta {
+        width: 88%;
+        padding: 45px 20px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .subtitulo {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .contador {
+        min-width: 0;
+        width: 100%;
+        padding: 12px 8px 14px;
+      }
+
+      .tiempo-cajas {
+        gap: 3px;
+      }
+
+      .unidad {
+        min-width: 43px;
+      }
+
+      .numero {
+        font-size: 16px;
+      }
+
+      .etiqueta {
+        font-size: 7px;
+      }
+
+      .separador {
+        font-size: 14px;
+      }
+
+      .carta {
+        width: 90%;
+        padding: 40px 30px;
+        max-height: 86vh;
+      }
+
+      .texto-carta {
+        font-size: 15px;
+      }
+
+      .titulo-carta {
+        font-size: 28px;
+      }
+
+      .firma {
+        font-size: 21px;
+      }
+
+      .galeria {
+        padding-top: 35px;
+      }
+
+      .galeria-titulo {
+        font-size: 27px;
+      }
+
+      .galeria-subtitulo {
+        font-size: 13px;
+      }
+
+      .carrusel {
+        gap: 20px;
+        padding: 25px 11vw 25px;
+      }
+
+      .foto-card {
+        flex: 0 0 78vw;
+      }
+
+      .polaroid {
+        width: 78vw;
+        padding: 9px 9px 15px;
+      }
+
+      .polaroid img {
+        width: 100%;
+        height: 48vh;
+        max-height: 360px;
+        object-fit: contain;
+      }
+
+      .foto-mensaje {
+        font-size: 15px;
+        margin-top: 9px;
+      }
+
+      .cerrar-galeria {
+        top: 10px;
+        right: 15px;
+      }
+
+      .boton-musica-sparks {
+        margin-top: 0;
+      }
+
+      .flecha-volver {
+        margin-top: 8px;
+        font-size: 15px;
+      }
+
+      .boton-corazones {
+        margin-top: 8px;
+        font-size: 13px;
+      }
+
+      .corazones-titulo {
+        font-size: 29px;
+      }
+
+      .corazones-subtitulo {
+        font-size: 13px;
+        padding: 0 20px;
+      }
+
+      .corazones-area {
+        width: 94vw;
+        height: 48vh;
+        max-height: 390px;
+      }
+
+      .corazon-interactivo {
+        font-size: 29px;
+      }
+
+      .mensaje-corazon {
+        font-size: 14px;
+        width: 82vw;
+      }
+
+      .boton-secreto {
+        font-size: 13px;
+      }
+
+      .boton-volver-corazones {
+        font-size: 13px;
+      }
+
+      .secreto-titulo {
+        font-size: 29px;
+      }
+
+      .secreto-carta {
+        width: 90vw;
+        max-height: 62vh;
+        padding: 25px 22px;
+      }
+
+      .secreto-texto {
+        font-size: 15px;
+        line-height: 1.65;
+      }
+
+      .secreto-boton {
+        font-size: 13px;
+      }
+
+      .universo-titulo {
+        font-size: 29px;
+      }
+
+      .universo-subtitulo {
+        font-size: 13px;
+        padding: 0 20px;
+      }
+
+      .constelacion {
+        width: 94vw;
+        height: 49vh;
+        max-height: 400px;
+      }
+
+      .estrella {
+        width: 8px;
+        height: 8px;
+      }
+
+      .mensaje-estrella {
+        bottom: 2px;
+        font-size: 14px;
+        width: 82vw;
+      }
+
+      .universo-frase {
+        font-size: 14px;
+        padding: 0 20px;
+      }
+
+      .boton-regalo {
+        margin-top: 10px;
+        font-size: 13px;
+      }
+
+      .regalo-titulo {
+        font-size: 29px;
+        padding: 0 20px;
+      }
+
+      .regalo-subtitulo {
+        font-size: 14px;
+        padding: 0 25px;
+      }
+
+      .caja-regalo {
+        transform: scale(0.9);
+        margin-top: 35px;
+      }
+
+      .caja-regalo:hover {
+        transform: scale(0.94) translateY(-5px);
+      }
+
+      .texto-regalo {
+        font-size: 15px;
+        max-width: 90%;
+        margin-top: 15px;
+      }
+
+      .final-pantalla {
+        padding: 25px;
+      }
+
+      .final-pequeno {
+        font-size: 14px;
+        margin-bottom: 18px;
+      }
+
+      .final-mensaje {
+        font-size: 25px;
+        line-height: 1.55;
+      }
+
+      .final-amo {
+        font-size: 52px;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio id="musica" preload="auto">
+    <source src="wonderwall.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="musicaSparks" preload="auto">
+    <source src="Coldplay - Sparks.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="corazon c1">♡</div>
+  <div class="corazon c2">♡</div>
+  <div class="corazon c3">♡</div>
+  <div class="corazon c4">♡</div>
+  <div class="corazon c5">♡</div>
+  <div class="corazon c6">♡</div>
+
+  <div class="tarjeta">
+
+    <h1>
+      Te amo<br>
+      Kamila
+    </h1>
+
+    <div class="subtitulo">
+      ♥ con todo mi corazón ♥
+    </div>
+
+    <div class="contador">
+
+      <div class="contador-titulo">
+        llevamos juntos
+      </div>
+
+      <div class="tiempo-cajas">
+
+        <div class="unidad">
+          <span class="numero" id="meses">0</span>
+          <span class="etiqueta">meses</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="dias">0</span>
+          <span class="etiqueta">días</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="horas">0</span>
+          <span class="etiqueta">horas</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="minutos">0</span>
+          <span class="etiqueta">min</span>
+        </div>
+
+        <div class="separador">:</div>
+
+        <div class="unidad">
+          <span class="numero" id="segundos">0</span>
+          <span class="etiqueta">seg</span>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="boton-carta" onclick="abrirCarta()">
+      presiona aqui mi amor 💗
+    </button>
+
+  </div>
+
+  <div
+    class="overlay"
+    id="overlay"
+    onclick="cerrarSiTocaAfuera(event)"
+  >
+
+    <div class="carta" id="carta">
+
+      <div class="decoracion arriba-izq">♡</div>
+      <div class="decoracion arriba-der">♡</div>
+      <div class="decoracion abajo-izq">♡</div>
+      <div class="decoracion abajo-der">♡</div>
+
+      <button class="cerrar" onclick="cerrarCarta()">
+        ✕
+      </button>
+
+      <div class="titulo-carta">
+        Para ti, mi amor 💗
+      </div>
+
+      <div class="texto-carta">
+Mi amor, quiero que sepas que te amo con todo mi corazon, con toda mi alma, no hay dia ni hora en la que no piense en ti, te amo y te amo de verdad, gracias por ser una novia tan linda, gracias por siempre apoyarme, ahora me toca apoyarte a ti.
+
+Se te viene el pre y se vienen cosas complicadas, pero no imposibles, recuerda que tu puedes con todo, recuerda que eres muy capaz, recuerda que eres fuerte, inteligente pero sobretodo una mujer valiente.
+
+Asi que si las cosas se ponen dificiles y sientes que ya no puedes mas, estare aqui para apoyarte, para darte lo que necesites, para escucharte y para aconsejarte.
+
+Quiero que seas lo mas feliz posible mi amor y por eso te apoyare al 100 en esta nueva etapa que se te viene.
+
+Dale mi amor, que tu puedes, recuerda que siempre me vas a tener aqui, en ti veo mucho futuro, en lo que sea que TÚ decidas ser, vas a ser la mejor en eso, porque eres muy capaz de todo, siempre estare para ti mi amor, si nadie esta contigo yo simpre voy a estar ahi, no me importa contra cuantos me tenga que ir porque nunca dejare de apoyarte y de alentarte, todo lo hago por ti, por la mujer de mi vida, la que me da felicidad, nunca dudes de eso amor, eres mi felicidad, eres mi vida entera, no me puedo imaginar una vida sin ti, porque a tu lado todo es diferente, todo es mejor, asi que siempre cuenta conmigo, para cualquier cosa que necesites yo estare apoyandote, ayudandote, guiandote.
+
+Soy muy afortunado de estar contigo, lo supe desde que hablabamos por Instagram, conociendo tu forma de ser tan bella la cual me enamoro, lo supe desde que te vi por primera vez y no podia dejar de pensar en lo hermosa que eres, desde ahi supe que no queria nada mas que estar a tu lado, cuidarte y ayudarte siempre.
+
+Gracias mi amor, gracias por llegar a mi vida, no puedo ser mas afortunado que ahora, teniendo a una mujer como tu, mi todo.
+
+Y siempre recuerda mi amor:
+
+ERES MI MAYOR ORGULLO
+
+TE AMO MILLONES MI AMOR, MUAAAA 💗
+      </div>
+
+      <div class="firma">
+        Con todo mi amor,<br>
+        Matias 💗
+      </div>
+
+      <button
+        class="control-musica"
+        id="controlMusica"
+        onclick="alternarMusica(event)"
+      >
+        ♫ pausar música
+      </button>
+
+      <div class="corazon-final">
+        ♥
+      </div>
+
+      <button
+        class="boton-galeria"
+        onclick="abrirGaleria(event)"
+      >
+        →
+      </button>
+
+      <div class="texto-pista">
+        desliza para ver nuestros recuerdos 💗
+      </div>
+
+    </div>
+
+    <!-- GALERIA -->
+
+    <div class="galeria" id="galeria">
+
+      <button
+        class="cerrar cerrar-galeria"
+        onclick="cerrarCarta()"
+      >
+        ✕
+      </button>
+
+      <div class="galeria-titulo">
+        Nuestros recuerdos 💗
+      </div>
+
+      <div class="galeria-subtitulo">
+        desliza para verlos →
+      </div>
+
+      <div class="carrusel" id="carrusel">
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 1.jpeg" alt="Recuerdos a tu lado">
+            <div class="foto-mensaje">Recuerdos a tu lado</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 2.jpeg" alt="Felicidad por que seas mi novia">
+            <div class="foto-mensaje">Felicidad por que seas mi novia</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 3.jpeg" alt="Siempre yendo de tu manito">
+            <div class="foto-mensaje">Siempre yendo de tu manito</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 4.jpeg" alt="El amor contigo es hermoso">
+            <div class="foto-mensaje">El amor contigo es hermoso</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 5.jpeg" alt="Nunca dejare de amarte">
+            <div class="foto-mensaje">Nunca dejare de amarte</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 6.jpeg" alt="Uno de los dias mas importantes">
+            <div class="foto-mensaje">Uno de los dias mas importantes</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 7.jpeg" alt="Ire a donde sea que estes">
+            <div class="foto-mensaje">Ire a donde sea que estes</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 8.jpeg" alt="Afortunado de estar contigo">
+            <div class="foto-mensaje">Afortunado de estar contigo</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 9.jpeg" alt="Me enamoras todos los dias">
+            <div class="foto-mensaje">Me enamoras todos los dias</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 10.jpeg" alt="MIMIMIMI">
+            <div class="foto-mensaje">MIMIMIMI</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 11.jpeg" alt="Te ves tan tierna de bebe owww">
+            <div class="foto-mensaje">Te ves tan tierna de bebe owww</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 12.jpeg" alt="Con la mujer mas hermosa">
+            <div class="foto-mensaje">Con la mujer mas hermosa</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 13.jpeg" alt="Fortuna">
+            <div class="foto-mensaje">Fortuna</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 14.jpeg" alt="Me enamoras con cada detalle">
+            <div class="foto-mensaje">Me enamoras con cada detalle</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 15.jpeg" alt="La primera vez que fui a tu casa">
+            <div class="foto-mensaje">La primera vez que fui a tu casa</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 16.jpeg" alt="Ninguna flor se compara con tu belleza">
+            <div class="foto-mensaje">Ninguna flor se compara con tu belleza</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 17.jpeg" alt="El dia mas importante de mi vida">
+            <div class="foto-mensaje">El dia mas importante de mi vida</div>
+          </div>
+        </div>
+
+        <div class="foto-card">
+          <div class="polaroid">
+            <img src="foto 18.jpeg" alt="Prometo amarte por siempre">
+            <div class="foto-mensaje">Prometo amarte por siempre</div>
+          </div>
+        </div>
+
+      </div>
+
+      <button
+        class="boton-musica-sparks"
+        id="controlSparks"
+        onclick="alternarSparks(event)"
+      >
+        ♫ pausar música
+      </button>
+
+      <button
+        class="boton-corazones"
+        onclick="abrirCorazones(event)"
+      >
+        hay algo mas para ti 💗
+      </button>
+
+      <button
+        class="flecha-volver"
+        onclick="volverCarta(event)"
+      >
+        ← volver a mi carta
+      </button>
+
+    </div>
+
+    <!-- CORAZONES INTERACTIVOS -->
+
+    <div class="corazones-pantalla" id="corazonesPantalla">
+
+      <button
+        class="cerrar"
+        style="color:white; text-shadow:0 2px 8px rgba(70,30,50,0.4);"
+        onclick="volverGaleria(event)"
+      >
+        ✕
+      </button>
+
+      <div class="corazones-titulo">
+        cosas que amo de ti 💗
+      </div>
+
+      <div class="corazones-subtitulo">
+        toca cada corazon y descubre lo que quiero decirte
+      </div>
+
+      <div class="corazones-area">
+
+        <button
+          class="corazon-interactivo"
+          style="left:10%; top:18%;"
+          onclick="mostrarCorazon(this, 'Me encanta la forma en la que me haces sentir amado todos los dias ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:25%; top:45%;"
+          onclick="mostrarCorazon(this, 'Amo tu forma de ser y esa manera tan tuya de hacerme sonreir ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:40%; top:20%;"
+          onclick="mostrarCorazon(this, 'Me encanta poder contarte todo y saber que siempre puedo ser yo contigo ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:55%; top:42%;"
+          onclick="mostrarCorazon(this, 'Amo cada pequeño detalle que tienes conmigo, incluso los que tu crees que no noto ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:72%; top:18%;"
+          onclick="mostrarCorazon(this, 'Me encanta verte feliz porque no hay nada que quiera mas que verte sonreir ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:87%; top:48%;"
+          onclick="mostrarCorazon(this, 'Amo la confianza que hemos construido y todo lo que seguimos aprendiendo juntos ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:16%; top:72%;"
+          onclick="mostrarCorazon(this, 'Amo nuestros momentos juntos, incluso los mas simples, porque contigo se sienten especiales ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:35%; top:82%;"
+          onclick="mostrarCorazon(this, 'Me encanta tenerte en mi vida y poder llamarte mi novia ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:58%; top:76%;"
+          onclick="mostrarCorazon(this, 'Amo todo lo que eres y no cambiaria por nada la persona de la que me enamore ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:78%; top:82%;"
+          onclick="mostrarCorazon(this, 'Me enamoras cada dia un poquito mas y no pienso dejar de hacerlo ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:48%; top:60%;"
+          onclick="mostrarCorazon(this, 'Amo saber que estamos construyendo algo que es solamente nuestro ❤️')"
+        >♥</button>
+
+        <button
+          class="corazon-interactivo"
+          style="left:91%; top:22%;"
+          onclick="mostrarCorazon(this, 'Y sobre todo amo que seas tu, porque no quiero compartir mi vida con nadie mas ❤️')"
+        >♥</button>
+
+        <div
+          class="mensaje-corazon"
+          id="mensajeCorazon"
+        ></div>
+
+      </div>
+
+      <button
+        class="boton-secreto"
+        onclick="abrirSecreto(event)"
+      >
+        descubrir algo secreto 💗
+      </button>
+
+      <button
+        class="boton-volver-corazones"
+        onclick="volverGaleria(event)"
+      >
+        ← volver a nuestros recuerdos
+      </button>
+
+    </div>
+
+    <!-- MENSAJE SECRETO -->
+
+    <div
+      class="secreto-pantalla"
+      id="secretoPantalla"
+    >
+
+      <div class="secreto-corazon">
+        ♥
+      </div>
+
+      <div class="secreto-titulo">
+        solo para ti 💗
+      </div>
+
+      <div class="secreto-carta">
+
+        <div class="secreto-texto">
+si llegaste hasta aqui es porque de verdad quisiste ver todo lo que prepare para ti, y no sabes lo feliz que me hace saber que lo hiciste, probablemente ya te dije muchas veces que te amo, pero hay algo que quiero que recuerdes siempre: no importa cuantos dias pasen, cuantos problemas tengamos o cuanto cambien nuestras vidas, yo siempre voy a elegirte, quiero seguir conociendote, seguir aprendiendo de ti, seguir riendome contigo y seguir construyendo nuestra historia poquito a poquito yo no quiero que seas solamente un recuerdo bonito de mi vida, quiero que seas parte de todo lo que viene, quiero verte cumplir tus sueños, estar ahi cuando estes feliz y tambien cuando las cosas no salgan del todo bien, y si algun dia dudas de lo mucho que significas para mi, vuelve a este mensaje y recuerda que hubo un momento en el que hice todo esto solamente para verte sonreir, te amo mas de lo que muchas veces puedo explicar con palabras, y espero poder demostrartelo durante muchisimo tiempo, te amodoro mi corazon💗
+        </div>
+
+      </div>
+
+      <button
+        class="secreto-boton"
+        onclick="abrirUniversoDesdeSecreto(event)"
+      >
+        seguir → 
+      </button>
+
+    </div>
+
+    <!-- UNIVERSO -->
+
+    <div class="universo" id="universo">
+
+      <div class="universo-titulo">
+        Nuestro universo 💗
+      </div>
+
+      <div class="universo-subtitulo">
+        toca las estrellas, algunas tienen algo que decirte 💗
+      </div>
+
+      <div class="constelacion">
+
+        <svg
+          class="lineas-corazon"
+          viewBox="0 0 650 430"
+          preserveAspectRatio="none"
+        >
+          <path d="
+            M325 365
+            L270 315
+            L215 265
+            L155 205
+            L125 150
+            L135 105
+            L170 72
+            L215 62
+            L260 78
+            L300 115
+            L325 145
+            L350 115
+            L390 78
+            L435 62
+            L480 72
+            L515 105
+            L525 150
+            L495 205
+            L435 265
+            L380 315
+            Z
+          " />
+
+          <path d="
+            M125 150
+            L215 180
+            L325 145
+            L435 180
+            L525 150
+          " />
+
+          <path d="
+            M215 180
+            L270 315
+            L325 365
+            L380 315
+            L435 180
+          " />
+
+          <path d="
+            M170 72
+            L260 78
+            L325 145
+            L390 78
+            L480 72
+          " />
+        </svg>
+
+        <div
+          class="estrella"
+          style="left:19%; top:25%;"
+          onclick="mostrarEstrella(this, 'Tu felicidad es mi felicidad ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:26%; top:42%;"
+          onclick="mostrarEstrella(this, 'Siempre estare para ti ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:33%; top:29%;"
+          onclick="mostrarEstrella(this, 'Tienes los ojos mas hermosos que he visto ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:42%; top:50%;"
+          onclick="mostrarEstrella(this, 'Eres la mejor novia ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:50%; top:36%;"
+          onclick="mostrarEstrella(this, 'Recuerda que puedes con todo ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:58%; top:50%;"
+          onclick="mostrarEstrella(this, 'Me haces mejor persona ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:67%; top:29%;"
+          onclick="mostrarEstrella(this, 'Me enamoro todos los dias de ti ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:74%; top:42%;"
+          onclick="mostrarEstrella(this, 'Tu amor es lo mas valioso que tengo ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:81%; top:25%;"
+          onclick="mostrarEstrella(this, 'Nunca te vayas de mi lado ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:42%; top:70%;"
+          onclick="mostrarEstrella(this, 'Eres lo mejor que me ha pasado ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:50%; top:85%;"
+          onclick="mostrarEstrella(this, 'Quiero estar a tu lado siempre ❤️')"
+        ></div>
+
+        <div
+          class="estrella"
+          style="left:58%; top:70%;"
+          onclick="mostrarEstrella(this, 'Mi amor por ti nunca dejara de crecer ❤️')"
+        ></div>
+
+        <div
+          class="mensaje-estrella"
+          id="mensajeEstrella"
+        ></div>
+
+      </div>
+
+      <div class="universo-frase">
+        quizás las estrellas no tienen nombres, pero yo sé exactamente cuál es el mio: Kamila ❤️
+      </div>
+
+      <button
+        class="boton-regalo"
+        onclick="abrirRegalo(event)"
+      >
+        todavía falta algo 💗
+      </button>
+
+    </div>
+
+    <!-- ULTIMO REGALO -->
+
+    <div
+      class="regalo-pantalla"
+      id="regaloPantalla"
+    >
+
+      <div class="regalo-titulo">
+        espera, todavía falta algo
+      </div>
+
+      <div class="regalo-subtitulo">
+        este es mi ultimo regalo para ti
+      </div>
+
+      <div
+        class="caja-regalo"
+        id="cajaRegalo"
+        onclick="abrirCaja()"
+      >
+
+        <div class="caja-base"></div>
+
+        <div class="tapa-regalo"></div>
+
+        <div class="cinta-vertical">
+          <div class="lazo-izq"></div>
+          <div class="lazo-der"></div>
+        </div>
+
+        <div class="corazon-regalo">
+          ♥
+        </div>
+
+      </div>
+
+      <div class="texto-regalo">
+        mi ultimo regalo no cabe en esta pagina
+        <br><br>
+        son todos los momentos que todavía nos faltan vivir juntos. ❤️
+      </div>
+
+      <button
+        class="boton-final"
+        onclick="abrirFinal(event)"
+      >
+        seguir →
+      </button>
+
+    </div>
+
+    <!-- MENSAJE FINAL -->
+
+    <div
+      class="final-pantalla"
+      id="finalPantalla"
+    >
+
+      <div class="final-pequeno">
+        si llegaste hasta aqui, 💗
+      </div>
+
+      <div class="final-mensaje">
+        recuerda que siempre estare para ti, siempre te amare,
+        hoy, mañana y siempre, porque algun dia seras mi esposa
+        y sere el hombre mas feliz del mundo
+      </div>
+
+      <div class="final-amo">
+        TE AMO ❤️
+      </div>
+
+      <button
+        class="volver-inicio"
+        onclick="volverInicio(event)"
+      >
+        volver al inicio
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const fechaInicio =
+      new Date(2026, 6, 25, 0, 0, 0);
+
+
+    /* CONTADOR */
+
+    function actualizarContador() {
+
+      const ahora = new Date();
+
+      let meses =
+        (ahora.getFullYear() - fechaInicio.getFullYear()) * 12 +
+        (ahora.getMonth() - fechaInicio.getMonth());
+
+      let fechaTemporal =
+        new Date(fechaInicio);
+
+      fechaTemporal.setMonth(
+        fechaInicio.getMonth() + meses
+      );
+
+      if (fechaTemporal > ahora) {
+
+        meses--;
+
+        fechaTemporal =
+          new Date(fechaInicio);
+
+        fechaTemporal.setMonth(
+          fechaInicio.getMonth() + meses
+        );
+      }
+
+      const diferencia =
+        ahora - fechaTemporal;
+
+      const dias =
+        Math.floor(
+          diferencia /
+          (1000 * 60 * 60 * 24)
+        );
+
+      const horas =
+        Math.floor(
+          (diferencia /
+            (1000 * 60 * 60)) % 24
+        );
+
+      const minutos =
+        Math.floor(
+          (diferencia /
+            (1000 * 60)) % 60
+        );
+
+      const segundos =
+        Math.floor(
+          (diferencia / 1000) % 60
+        );
+
+      document.getElementById("meses").textContent =
+        meses;
+
+      document.getElementById("dias").textContent =
+        dias;
+
+      document.getElementById("horas").textContent =
+        String(horas).padStart(2, "0");
+
+      document.getElementById("minutos").textContent =
+        String(minutos).padStart(2, "0");
+
+      document.getElementById("segundos").textContent =
+        String(segundos).padStart(2, "0");
+    }
+
+    actualizarContador();
+
+    setInterval(
+      actualizarContador,
+      1000
+    );
+
+
+    /* ABRIR CARTA */
+
+    function abrirCarta() {
+
+      const overlay =
+        document.getElementById("overlay");
+
+      const carta =
+        document.getElementById("carta");
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      const universo =
+        document.getElementById("universo");
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      const final =
+        document.getElementById("finalPantalla");
+
+      const musica =
+        document.getElementById("musica");
+
+      const sparks =
+        document.getElementById("musicaSparks");
+
+      const control =
+        document.getElementById("controlMusica");
+
+      overlay.classList.remove("cerrando");
+      overlay.classList.remove("mostrar");
+
+      carta.classList.remove("oculta");
+      galeria.classList.remove("activa");
+      corazones.classList.remove("activo");
+      secreto.classList.remove("activo");
+      universo.classList.remove("activo");
+      regalo.classList.remove("activo");
+      final.classList.remove("activo");
+
+      document.getElementById("cajaRegalo").classList.remove("abierta");
+      regalo.classList.remove("abierto");
+
+      sparks.pause();
+      sparks.currentTime = 0;
+
+      void overlay.offsetWidth;
+
+      overlay.classList.add("mostrar");
+
+      musica.pause();
+      musica.currentTime = 0;
+
+      musica.play()
+        .then(() => {
+          control.textContent =
+            "♫ pausar música";
+        })
+        .catch(() => {
+          control.textContent =
+            "♫ reproducir música";
+        });
+
+      crearParticulas();
+    }
+
+
+    /* WONDERWALL */
+
+    function alternarMusica(event) {
+
+      event.stopPropagation();
+
+      const musica =
+        document.getElementById("musica");
+
+      const control =
+        document.getElementById("controlMusica");
+
+      if (musica.paused) {
+
+        musica.play();
+
+        control.textContent =
+          "♫ pausar música";
+
+      } else {
+
+        musica.pause();
+
+        control.textContent =
+          "♫ reproducir música";
+      }
+    }
+
+
+    /* GALERIA */
+
+    function abrirGaleria(event) {
+
+      event.stopPropagation();
+
+      const carta =
+        document.getElementById("carta");
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      const universo =
+        document.getElementById("universo");
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      const final =
+        document.getElementById("finalPantalla");
+
+      const musica =
+        document.getElementById("musica");
+
+      const sparks =
+        document.getElementById("musicaSparks");
+
+      const controlSparks =
+        document.getElementById("controlSparks");
+
+      musica.pause();
+      musica.currentTime = 0;
+
+      document.getElementById("controlMusica").textContent =
+        "♫ reproducir música";
+
+      carta.classList.add("oculta");
+      galeria.classList.add("activa");
+
+      corazones.classList.remove("activo");
+      secreto.classList.remove("activo");
+      universo.classList.remove("activo");
+      regalo.classList.remove("activo");
+      final.classList.remove("activo");
+
+      sparks.pause();
+      sparks.currentTime = 0;
+
+      sparks.play()
+        .then(() => {
+          controlSparks.textContent =
+            "♫ pausar música";
+        })
+        .catch(() => {
+          controlSparks.textContent =
+            "♫ reproducir música";
+        });
+
+      crearParticulas();
+    }
+
+
+    /* SPARKS */
+
+    function alternarSparks(event) {
+
+      event.stopPropagation();
+
+      const sparks =
+        document.getElementById("musicaSparks");
+
+      const control =
+        document.getElementById("controlSparks");
+
+      if (sparks.paused) {
+
+        sparks.play();
+
+        control.textContent =
+          "♫ pausar música";
+
+      } else {
+
+        sparks.pause();
+
+        control.textContent =
+          "♫ reproducir música";
+      }
+    }
+
+
+    /* CORAZONES */
+
+    function abrirCorazones(event) {
+
+      event.stopPropagation();
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      galeria.classList.remove("activa");
+      corazones.classList.add("activo");
+
+      crearParticulas();
+    }
+
+
+    function mostrarCorazon(elemento, mensaje) {
+
+      const caja =
+        document.getElementById("mensajeCorazon");
+
+      document
+        .querySelectorAll(".corazon-interactivo")
+        .forEach(corazon => {
+          corazon.classList.remove("activo");
+        });
+
+      elemento.classList.add("activo");
+
+      caja.textContent = mensaje;
+
+      caja.classList.remove("mostrar");
+
+      void caja.offsetWidth;
+
+      caja.classList.add("mostrar");
+    }
+
+
+    function volverGaleria(event) {
+
+      event.stopPropagation();
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      secreto.classList.remove("activo");
+      corazones.classList.remove("activo");
+      galeria.classList.add("activa");
+    }
+
+
+    /* SECRETO */
+
+    function abrirSecreto(event) {
+
+      event.stopPropagation();
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      corazones.classList.remove("activo");
+      secreto.classList.add("activo");
+
+      crearParticulas();
+    }
+
+
+    function abrirUniversoDesdeSecreto(event) {
+
+      event.stopPropagation();
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      const universo =
+        document.getElementById("universo");
+
+      secreto.classList.remove("activo");
+      universo.classList.add("activo");
+
+      crearParticulas();
+    }
+
+
+    /* VOLVER A CARTA */
+
+    function volverCarta(event) {
+
+      event.stopPropagation();
+
+      const carta =
+        document.getElementById("carta");
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      const universo =
+        document.getElementById("universo");
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      const final =
+        document.getElementById("finalPantalla");
+
+      const musica =
+        document.getElementById("musica");
+
+      const sparks =
+        document.getElementById("musicaSparks");
+
+      sparks.pause();
+      sparks.currentTime = 0;
+
+      document.getElementById("controlSparks").textContent =
+        "♫ reproducir música";
+
+      galeria.classList.remove("activa");
+      corazones.classList.remove("activo");
+      secreto.classList.remove("activo");
+      universo.classList.remove("activo");
+      regalo.classList.remove("activo");
+      final.classList.remove("activo");
+
+      carta.classList.remove("oculta");
+
+      musica.pause();
+      musica.currentTime = 0;
+
+      musica.play()
+        .then(() => {
+          document.getElementById("controlMusica").textContent =
+            "♫ pausar música";
+        })
+        .catch(() => {
+          document.getElementById("controlMusica").textContent =
+            "♫ reproducir música";
+        });
+
+      crearParticulas();
+    }
+
+
+    /* UNIVERSO */
+
+    function abrirUniverso(event) {
+
+      event.stopPropagation();
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const universo =
+        document.getElementById("universo");
+
+      galeria.classList.remove("activa");
+      universo.classList.add("activo");
+
+      crearParticulas();
+    }
+
+
+    function mostrarEstrella(elemento, mensaje) {
+
+      const caja =
+        document.getElementById("mensajeEstrella");
+
+      document
+        .querySelectorAll(".estrella")
+        .forEach(estrella => {
+          estrella.classList.remove("activa");
+        });
+
+      elemento.classList.add("activa");
+
+      caja.textContent = mensaje;
+
+      caja.classList.remove("mostrar");
+
+      void caja.offsetWidth;
+
+      caja.classList.add("mostrar");
+    }
+
+
+    /* REGALO */
+
+    function abrirRegalo(event) {
+
+      event.stopPropagation();
+
+      const universo =
+        document.getElementById("universo");
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      universo.classList.remove("activo");
+      regalo.classList.add("activo");
+
+      crearParticulas();
+    }
+
+
+    function abrirCaja() {
+
+      const caja =
+        document.getElementById("cajaRegalo");
+
+      const pantalla =
+        document.getElementById("regaloPantalla");
+
+      if (
+        caja.classList.contains("abierta")
+      ) {
+        return;
+      }
+
+      caja.classList.add("abierta");
+      pantalla.classList.add("abierto");
+
+      crearParticulas();
+    }
+
+
+    /* FINAL */
+
+    function abrirFinal(event) {
+
+      event.stopPropagation();
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      const final =
+        document.getElementById("finalPantalla");
+
+      regalo.classList.remove("activo");
+      final.classList.add("activo");
+
+      crearLluviaCorazones();
+    }
+
+
+    /* VOLVER AL INICIO */
+
+    function volverInicio(event) {
+
+      event.stopPropagation();
+
+      cerrarCarta();
+
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 600);
+    }
+
+
+    /* CERRAR */
+
+    function cerrarCarta() {
+
+      const overlay =
+        document.getElementById("overlay");
+
+      const carta =
+        document.getElementById("carta");
+
+      const galeria =
+        document.getElementById("galeria");
+
+      const corazones =
+        document.getElementById("corazonesPantalla");
+
+      const secreto =
+        document.getElementById("secretoPantalla");
+
+      const universo =
+        document.getElementById("universo");
+
+      const regalo =
+        document.getElementById("regaloPantalla");
+
+      const final =
+        document.getElementById("finalPantalla");
+
+      const musica =
+        document.getElementById("musica");
+
+      const sparks =
+        document.getElementById("musicaSparks");
+
+      if (
+        !overlay.classList.contains("mostrar")
+      ) {
+        return;
+      }
+
+      musica.pause();
+      musica.currentTime = 0;
+
+      sparks.pause();
+      sparks.currentTime = 0;
+
+      document.getElementById("controlMusica").textContent =
+        "♫ reproducir música";
+
+      document.getElementById("controlSparks").textContent =
+        "♫ reproducir música";
+
+      galeria.classList.remove("activa");
+      corazones.classList.remove("activo");
+      secreto.classList.remove("activo");
+      universo.classList.remove("activo");
+      regalo.classList.remove("activo");
+      final.classList.remove("activo");
+
+      carta.classList.remove("oculta");
+
+      document.getElementById("cajaRegalo").classList.remove("abierta");
+      regalo.classList.remove("abierto");
+
+      overlay.classList.remove("mostrar");
+      overlay.classList.add("cerrando");
+
+      setTimeout(() => {
+        overlay.classList.remove("cerrando");
+      }, 550);
+    }
+
+
+    function cerrarSiTocaAfuera(event) {
+
+      if (
+        event.target ===
+        document.getElementById("overlay")
+      ) {
+        cerrarCarta();
+      }
+    }
+
+
+    /* PARTICULAS */
+
+    function crearParticulas() {
+
+      const cantidad = 22;
+
+      for (
+        let i = 0;
+        i < cantidad;
+        i++
+      ) {
+
+        const particula =
+          document.createElement("div");
+
+        particula.classList.add(
+          "particula"
+        );
+
+        particula.textContent =
+          Math.random() > 0.5
+            ? "♡"
+            : "♥";
+
+        const x =
+          (Math.random() - 0.5) * 650;
+
+        const y =
+          (Math.random() - 0.5) * 500;
+
+        const rotacion =
+          (Math.random() - 0.5) * 120;
+
+        particula.style.left =
+          "50%";
+
+        particula.style.top =
+          "50%";
+
+        particula.style.setProperty(
+          "--x",
+          `${x}px`
+        );
+
+        particula.style.setProperty(
+          "--y",
+          `${y}px`
+        );
+
+        particula.style.setProperty(
+          "--rot",
+          `${rotacion}deg`
+        );
+
+        particula.style.animationDelay =
+          `${Math.random() * 0.25}s`;
+
+        document.body.appendChild(
+          particula
+        );
+
+        setTimeout(() => {
+          particula.remove();
+        }, 1800);
+      }
+    }
+
+
+    /* LLUVIA FINAL DE CORAZONES */
+
+    function crearLluviaCorazones() {
+
+      for (
+        let i = 0;
+        i < 35;
+        i++
+      ) {
+
+        const corazon =
+          document.createElement("div");
+
+        corazon.className =
+          "particula";
+
+        corazon.textContent =
+          Math.random() > 0.25
+            ? "♥"
+            : "♡";
+
+        corazon.style.left =
+          `${Math.random() * 100}%`;
+
+        corazon.style.top =
+          "-20px";
+
+        corazon.style.fontSize =
+          `${12 + Math.random() * 18}px`;
+
+        corazon.style.setProperty(
+          "--x",
+          `${(Math.random() - 0.5) * 160}px`
+        );
+
+        corazon.style.setProperty(
+          "--y",
+          `${window.innerHeight + 100}px`
+        );
+
+        corazon.style.setProperty(
+          "--rot",
+          `${(Math.random() - 0.5) * 360}deg`
+        );
+
+        corazon.style.animationDuration =
+          `${2.5 + Math.random() * 2}s`;
+
+        document.body.appendChild(
+          corazon
+        );
+
+        setTimeout(() => {
+          corazon.remove();
+        }, 5000);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
